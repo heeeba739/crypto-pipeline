@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Airflow
+airflow.db
+airflow/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Archives
+*.rar
+*.zip
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
