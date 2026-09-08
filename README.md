@@ -86,13 +86,13 @@ python fred_producer.py
 
 ##  Delivered
 
-- ✅ Kafka pipeline operational (Confluent Cloud)
-- ✅ Spark Structured Streaming validated (Databricks)
-- ✅ Airflow FRED DAG deployed (Astronomer)
-- ✅ Supabase warehouse connected
-- ✅ Python scripts tested and documented
-- ✅ Architecture diagram
+-  Kafka pipeline operational (Confluent Cloud)
+-  Spark Structured Streaming validated (Databricks)
+-  Airflow FRED DAG deployed (Astronomer)
+-  Supabase warehouse connected
+-  Python scripts tested and documented
+-  Architecture diagram
 
 ##👤 Author
 
-**Hiba Az** — Data Engineer @ DATA NEXT
+**Hiba Az** — Data Analyst @ DATA NEXT
