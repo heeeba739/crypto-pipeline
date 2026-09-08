@@ -30,3 +30,69 @@ A real-time Data Engineering platform combining streaming and batch processing t
 | Language | Python 3.11 |
 
 ##  Project Structure
+
+##  Environment Variables
+
+Copy `.env.exemple` to `.env` and fill in your values:
+
+```bash
+cp .env.exemple .env
+```
+
+```env
+CONFLUENT_BOOTSTRAP_SERVERS=your_bootstrap_server
+CONFLUENT_API_KEY=your_api_key
+CONFLUENT_API_SECRET=your_api_secret
+NEWSAPI_KEY=your_newsapi_key
+FRED_API_KEY=your_fred_api_key
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+```
+
+##  Installation
+
+```bash
+pip install confluent-kafka websocket-client requests pandas pyarrow supabase redis
+```
+
+##  Run the Producers
+
+```bash
+# Terminal 1 — Binance WebSocket
+python binance_producer.py
+
+# Terminal 2 — NewsAPI
+python news_producer.py
+
+# Terminal 3 — FRED API
+python fred_producer.py
+```
+
+##  Kafka Topics
+
+| Topic | Partitions | Description |
+|---|---|---|
+| `trades_topic` | 3 | Real-time Binance trades |
+| `news_topic` | 3 | NewsAPI crypto articles |
+| `enriched_market_topic` | 3 | Spark enriched data |
+| `alerts_topic` | 1 | Volatility alerts |
+
+##  Spark Structured Streaming
+
+- **Watermark** : 5 minutes
+- **Windowing** : 1 min / 5 min
+- **Stream-to-Stream Join** : News + Price spike ±5 min
+- **Multi-Sink Fan-Out** : Data Lake + Supabase + alerts_topic
+
+##  Delivered
+
+- ✅ Kafka pipeline operational (Confluent Cloud)
+- ✅ Spark Structured Streaming validated (Databricks)
+- ✅ Airflow FRED DAG deployed (Astronomer)
+- ✅ Supabase warehouse connected
+- ✅ Python scripts tested and documented
+- ✅ Architecture diagram
+
+##👤 Author
+
+**Hiba Az** — Data Engineer @ DATA NEXT
