@@ -84,15 +84,7 @@ python fred_producer.py
 - **Stream-to-Stream Join** : News + Price spike ±5 min
 - **Multi-Sink Fan-Out** : Data Lake + Supabase + alerts_topic
 
-##  Delivered
 
--  Kafka pipeline operational (Confluent Cloud)
--  Spark Structured Streaming validated (Databricks)
--  Airflow FRED DAG deployed (Astronomer)
--  Supabase warehouse connected
--  Python scripts tested and documented
--  Architecture diagram
+## Author
 
-##👤 Author
-
-**Hiba Az** — Data Analyst @ DATA NEXT
+**Hiba Az** — Data Analyst 
